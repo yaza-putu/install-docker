@@ -1,0 +1,49 @@
+version: '2'
+
+services:
+  phpfpm:
+    container_name: phpfpm
+    build: './phpfpm'
+    links:
+      - mysql
+    volumes:
+      - ./apps/kita-anak-indonesia:/var/www/kita-anak-indonesia
+
+  mysql:
+    container_name: mysql
+    build: './mysql'
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_ROOT_PASSWORD=temp123
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+  nginx:
+    container_name: nginx
+    image: 'nginx:1.15-alpine'
+    links:
+      - phpfpm
+    ports:
+      - '8080:80'
+
+    volumes:
+      - ./nginx/vhost.conf:/etc/nginx/conf.d/default.conf
+      - ./apps/kita-anak-indonesia:/var/www/kita-anak-indonesia
+
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql:db
+    ports:
+      - "9090:80"
+    environment:
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=temp123
+      - PHP_UPLOAD_MAX_FILESIZE=100M
+      - UPLOAD_LIMIT=100M
+    volumes:
+      - ./phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
