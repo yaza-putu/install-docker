@@ -14,8 +14,15 @@
 
 #Instalasi di linux / mac
 * Silakan clone repo ini 
-* Silakan install docker di sistem anda, saya berasumsi docker sudah terinstall
-* silakan install docker compose di sistem anda, saya berasumsi ini sudah terinstall
+* Install docker
+```bash
+sudo apt-get install docker.io
+```
+* install docker compose 
+```bash
+sudo apt-get install docker-compose
+```
+* masuk ke folder docker
 ```bash
 ## masuk ke folder docker
 cd /folder-docker
