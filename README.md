@@ -33,7 +33,7 @@ docker container ls
 
 
 #cara deploy app (contoh:laravel)
-* silakan install composer terlebih dahulu https://github.com/yaza-putu/install-composer atau https://getcomposer.org/
+* silakan install composer terlebih dahulu <a href="https://github.com/yaza-putu/install-composer">disini</a>
 * buka docker-compose.yml
 * tambahakn lokasi folder sistem di volume phpfm dan ngix, lihat gambar 1 dan gambar 2
 ![alt text](https://res.cloudinary.com/dk0053zbe/image/upload/v1592650544/Docker/phpfm_gpqlup.png)
