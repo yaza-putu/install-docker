@@ -31,7 +31,7 @@ cd /folder-docker
 ## build up images and contaner running
 sudo docker-compose up -d --build, 
 ```
-* tunggu proses ini sampai selesai, akan memakan waktu +- minutes
+* tunggu proses ini sampai selesai, akan memakan waktu beberapa menit
 * done
 ```bash
 ###untuk mengecek apakah sudah berjalan 
