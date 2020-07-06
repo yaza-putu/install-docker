@@ -64,3 +64,5 @@ sudo docker-compose up -d
 ```bash
 sudo docker-compose down
 ```
+
+#note : sebelum mendeploy app silakan dimatikan terlebih dahulu dockernya, setelah selesai silakan di up kembali
