@@ -33,6 +33,7 @@ docker container ls
 
 
 #cara deploy app (contoh:laravel)
+* note: silakan install composer
 * buka docker-compose.yml
 * tambahakn lokasi folder sistem di volume phpfm dan ngix, lihat gambar 1 dan gambar 2
 ![alt text](https://res.cloudinary.com/dk0053zbe/image/upload/v1592650544/Docker/phpfm_gpqlup.png)
