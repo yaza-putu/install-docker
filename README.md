@@ -1,4 +1,4 @@
-# deploy apps on local with docker & docker-compose
+# Install docker & docker-compose + deploy laravel di docker
 
 #tested on linux and mac
 
