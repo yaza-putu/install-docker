@@ -53,7 +53,7 @@ gbr 3
 * registerkan port di nginx, contoh pada vhost kita buat projek kita-anak-indonesia di listen port 80, di nginx kita akan melakukan port forwading : jika user mengakses port 8080 kita akan forward ke port 80, contoh: (8080:80), di gambar 2 bisa anda lihat pada ports
 
 * contoh diatas saya pakai kita-anak-indonesia (laravel  projek)
-* pada .env laravel username database= root, password database = temp123
+* pada .env laravel username database= root, password database = temp123,DB_HOST=ip addres LAN/WLAN atau DB_HOST=mysql
 * jika sudah selesai, anda bisa menjalankan ulang service containernya
 
 #Start container dengan docker-compose
