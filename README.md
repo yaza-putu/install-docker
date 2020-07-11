@@ -69,3 +69,8 @@ sudo docker-compose down
 sudo docker system prune --all
 ```
 #note : sebelum mendeploy app silakan dimatikan terlebih dahulu dockernya, setelah selesai silakan di up kembali
+* fix permission storage/logs dan bootstrap/cache di laravel
+```bash
+sudo chmod -R ugo+rw storage/logs
+sudo chmod -R ugo+rw bootstrap/cache
+```
