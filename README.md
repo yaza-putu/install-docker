@@ -64,5 +64,8 @@ sudo docker-compose up -d
 ```bash
 sudo docker-compose down
 ```
-
+#delete all image, contianer, network, etc on docker
+```bash
+sudo docker system prune --all
+```
 #note : sebelum mendeploy app silakan dimatikan terlebih dahulu dockernya, setelah selesai silakan di up kembali
