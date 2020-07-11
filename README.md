@@ -64,7 +64,7 @@ sudo docker-compose up -d
 ```bash
 sudo docker-compose down
 ```
-#delete all image, contianer, network, etc on docker
+#delete all image, container, network, etc on docker
 ```bash
 sudo docker system prune --all
 ```
