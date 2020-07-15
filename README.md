@@ -1,4 +1,4 @@
-# Install docker & docker-compose + deploy laravel di docker
+### Install docker & docker-compose + deploy laravel di docker
 
 #tested on linux and mac
 
