@@ -35,7 +35,7 @@ sudo docker-compose up -d --build
 * done
 ```bash
 ###untuk mengecek container apakah sudah berjalan 
-docker container ls
+sudo docker container ls
 ```
 
 
