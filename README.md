@@ -75,16 +75,16 @@ sudo chmod -R ugo+rw storage/logs
 sudo chmod -R ugo+rw bootstrap/cache
 ```
 
-# if you can see this error above when you access phpmyadmin you can use solutions this below
+# Gunakan solusi dibawah ini jika kalian melihat error seperti dibawah ini saat mengakses phpmyadmin
 
-fix fix mysqli::real_connect(): (HY000/1130): Host 'ip address' is not allowed to connect to this MySQL server 
+mysqli::real_connect(): (HY000/1130): Host 'ip address' is not allowed to connect to this MySQL server 
 
-you need adjust with config docker-compose.yml for use this bellow solutions: <br>
+anda bisa menyesuaikan config docker-compose.yml dengan solusi dibawah ini <br>
 contaner name for mysql : mysql <br>
 mysql_root_password : temp123 <br>
 mysq user : root <br>
 mysql user password : temp123 <br>
-this error happened because config mysql_root_password, user database anda password user database cannot regiestered on user host mysql.
+error ini terjadi pada saat docker-compose up --build , proses pendaftaran data mysql tidak terjadi, seperti pendaftaran mysql_root_password, user host mysql baik itu username dan passwordnya.
 <br>
 
 * Access terminal mysql container
@@ -115,3 +115,14 @@ CREATE USER 'root'@'%' IDENTIFIED BY 'your_password_root';
 ```bash
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 ```
+* exit mysql and terminal container
+* down docker-compose
+* stop docker service
+```bash
+sudo service docker stop
+```
+* start docker service
+```bash
+sudo service docker start
+```
+* up docker-compose
