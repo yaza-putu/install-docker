@@ -74,3 +74,44 @@ sudo docker system prune --all
 sudo chmod -R ugo+rw storage/logs
 sudo chmod -R ugo+rw bootstrap/cache
 ```
+
+###if you can see this error above when you access phpmyadmin you can use solutions this below
+
+fix fix mysqli::real_connect(): (HY000/1130): Host 'ip address' is not allowed to connect to this MySQL server 
+
+you need adjust with config docker-compose.yml for use this bellow solutions: <br>
+contaner name for mysql : mysql <br>
+mysql_root_password : temp123 <br>
+mysq user : root <br>
+mysql user password : temp123 <br>
+this error happened because config mysql_root_password, user database anda password user database cannot regiestered on user host mysql.
+<br>
+
+* Access terminal mysql container
+```bash
+sudo docker exec -ti contaner_mysql_name bash
+```
+* Login to mysql
+```bash
+mysql -u root -p
+```
+
+* Change password mysql root
+```bash
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'PASSWORD';
+```
+
+* Check existing database users
+```bash
+SELECT host, user FROM mysql.user;
+```
+
+* Add user mysql
+```bash
+CREATE USER 'root'@'%' IDENTIFIED BY 'your_password_root';
+```
+
+* Grant All Privilages database
+```bash
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+```
