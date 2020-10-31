@@ -126,3 +126,21 @@ sudo service docker stop
 sudo service docker start
 ```
 * up docker-compose
+
+## Optimasi speed request response docker di mac
+lokasi edit di docker-compose.yml
+tambahkan pada volume app di phpfpm 
+```yml
+:rw,delegated
+```
+menjadi seperti ini
+```yml
+services:
+  phpfpm:
+    container_name: phpfpm
+    build: './phpfpm'
+    links:
+      - mysql
+    volumes:
+      - ./apps/name-app:/var/www/name-app:rw,delegated
+```
