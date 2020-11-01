@@ -144,3 +144,4 @@ services:
     volumes:
       - ./apps/name-app:/var/www/name-app:rw,delegated
 ```
+Detail https://blog.javan.co.id/meningkatkan-performa-docker-di-macos-dan-windows-5e67abc55e8
