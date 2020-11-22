@@ -1,6 +1,6 @@
-# Install docker & docker-compose + deploy laravel di docker
+# Install docker & docker-compose + deploy laravel di docker (Development Local)
 
-#tested on linux, windows, and mac
+#tested on linux, windows, and mac (Development Local)
 
 #container & images 
 * MYSQL
