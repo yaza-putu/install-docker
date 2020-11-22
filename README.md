@@ -1,6 +1,6 @@
-### Install docker & docker-compose + deploy laravel di docker
+# Install docker & docker-compose + deploy laravel di docker
 
-#tested on linux and mac
+#tested on linux, windows, and mac
 
 #container & images 
 * MYSQL
@@ -9,7 +9,7 @@
 * NGINX
 
 #Requirement
-* Docker
+* Docker Desktop Community 2.3.0.5
 * Docker Compose
 
 # Instalasi di linux / mac
@@ -22,6 +22,11 @@ sudo apt-get install docker.io
 ```bash
 sudo apt-get install docker-compose
 ```
+# Install di windows
+* Silakan clone repo ini 
+* Silakan download docker di situs resmi https://docs.docker.com/docker-for-windows/release-notes/
+
+# Build Docker images
 * masuk ke folder docker
 ```bash
 ## masuk ke folder docker
@@ -37,7 +42,6 @@ sudo docker-compose up -d --build
 ###untuk mengecek container apakah sudah berjalan 
 sudo docker container ls
 ```
-
 
 # cara deploy app (contoh:laravel)
 * silakan install composer terlebih dahulu <a href="https://github.com/yaza-putu/install-composer">disini</a>
@@ -127,7 +131,7 @@ sudo service docker start
 ```
 * up docker-compose
 
-## Optimasi speed request response docker di mac
+## Optimasi speed request response docker di mac dan windows (Recomended)
 lokasi edit di docker-compose.yml
 tambahkan pada volume app di phpfpm 
 ```yml
