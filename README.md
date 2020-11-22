@@ -12,7 +12,7 @@
 * Docker Desktop Community 2.3.0.5
 * Docker Compose
 
-# Instalasi di linux / mac
+## Instalasi di linux / mac
 * Silakan clone repo ini 
 * Install docker
 ```bash
@@ -22,11 +22,11 @@ sudo apt-get install docker.io
 ```bash
 sudo apt-get install docker-compose
 ```
-# Install di windows
+## Install di windows
 * Silakan clone repo ini 
 * Silakan download docker di situs resmi https://docs.docker.com/docker-for-windows/release-notes/
 
-# Build Docker images
+## Build Docker images
 * masuk ke folder docker
 ```bash
 ## masuk ke folder docker
@@ -43,7 +43,7 @@ sudo docker-compose up -d --build
 sudo docker container ls
 ```
 
-# cara deploy app (contoh:laravel)
+## cara deploy app (contoh:laravel)
 * silakan install composer terlebih dahulu <a href="https://github.com/yaza-putu/install-composer">disini</a>
 * buka docker-compose.yml
 * tambahakn lokasi folder sistem di volume phpfm dan ngix, lihat gambar 1 dan gambar 2
@@ -60,26 +60,26 @@ gbr 3
 * pada .env laravel username database= root, password database = temp123,DB_HOST=ip addres LAN/WLAN atau DB_HOST=mysql
 * jika sudah selesai, anda bisa menjalankan ulang service containernya
 
-# Start container dengan docker-compose
+## Start container dengan docker-compose
 ```bash
 sudo docker-compose up -d
 ```
-# Mematikan service container
+## Mematikan service container
 ```bash
 sudo docker-compose down
 ```
-# delete all image, container, network, etc on docker
+## delete all image, container, network, etc on docker
 ```bash
 sudo docker system prune --all
 ```
-# note : sebelum mendeploy app silakan dimatikan terlebih dahulu dockernya, setelah selesai silakan di up kembali
+## note : sebelum mendeploy app silakan dimatikan terlebih dahulu dockernya, setelah selesai silakan di up kembali
 * fix permission storage/logs dan bootstrap/cache di laravel
 ```bash
 sudo chmod -R ugo+rw storage/logs
 sudo chmod -R ugo+rw bootstrap/cache
 ```
 
-# Gunakan solusi dibawah ini jika kalian melihat error seperti dibawah ini saat mengakses phpmyadmin
+## Gunakan solusi dibawah ini jika kalian melihat error seperti dibawah ini saat mengakses phpmyadmin
 
 mysqli::real_connect(): (HY000/1130): Host 'ip address' is not allowed to connect to this MySQL server 
 
